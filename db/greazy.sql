@@ -2,17 +2,18 @@ DROP TABLE deals;
 DROP TABLE burgers;
 DROP TABLE eateries;
 
-CREATE TABLE burgers (
+CREATE TABLE eateries (
   id SERIAL4 PRIMARY KEY,
   name VARCHAR(255),
   contact VARCHAR(255),
   logo VARCHAR(255)
 );
 
-CREATE TABLE eateries (
+CREATE TABLE burgers (
   id SERIAL4 PRIMARY KEY,
   name VARCHAR(255),
   type VARCHAR(255),
+  price FLOAT(2),
   logo VARCHAR(255)
 );
 

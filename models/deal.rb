@@ -1,16 +1,16 @@
-require_relative( '../db/sql_runner' )
+require_relative('../db/sql_runner')
 
 class Deal
 
-  attr_reader( :id, :name, :discount, :day, :eatery_id, :burger_id)
+  attr_reader(:id, :name, :discount, :day, :eatery_id, :burger_id)
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
     @name = options['name']
     @discount = options['discount'].to_f
     @day = options['day']
-    @eatery_id = options['eatery_id']
-    @burger_id = options['burger_id']
+    @eatery_id = options['eatery_id'].to_i
+    @burger_id = options['burger_id'].to_i
   end
 
   def save

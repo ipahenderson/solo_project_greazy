@@ -1,13 +1,14 @@
-require_relative( '../db/sql_runner' )
+require_relative('../db/sql_runner')
 
 class Burger
 
-  attr_reader( :id, :name, :type, :logo )
+  attr_reader(:id, :name, :type, :price, :logo)
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
     @name = options['name']
     @type = options['type']
+    @price = options['price'].to_f
     @logo = options['logo']
   end
 
@@ -16,14 +17,15 @@ class Burger
     (
       name,
       type,
+      price,
       logo
     )
     VALUES
     (
-      $1, $2, $3
+      $1, $2, $3, $4
     )
     RETURNING *"
-    values = [@name, @type, @logo]
+    values = [@name, @type, @price, @logo]
     burger_data = SqlRunner.run(sql, values)
     @id = burger_data.first()['id'].to_i
   end
@@ -34,14 +36,14 @@ class Burger
     (
       name,
       type,
-      logo,
-      quantity
+      price,
+      logo
     ) =
     (
-      $1, $2, $3
+      $1, $2, $3, $4
     )
-    WHERE id = $4"
-    values = [@name, @type, @logo, @id]
+    WHERE id = $5"
+    values = [@name, @type, @price, @logo, @id]
     SqlRunner.run(sql, values)
   end
 
