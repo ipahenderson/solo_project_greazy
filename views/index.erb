@@ -1,0 +1,19 @@
+<div id="deals-table">
+<% @deals.each do |deal|
+  if deal.day == @today%>
+  <div class="deal">
+    <h3><%= deal.name %></h3>
+    <div class="deal-image"
+    <span><img src="<%=deal.burger.logo%>" height=100px width=100px/></span>
+  </div>
+    <a class="viewdeal-button" href="">View Deal</a>
+    <table class="deal-info">
+      <tr><td><b>Regular Price:  </b> <%=deal.burger.price%></td><tr>
+      <tr><td><b>Discounted Price:   </b> 1234</td><tr>
+      <tr><td><b>Saving:   </b> 123</td><tr>
+      <tr><td><b>Eatery:   </b> <%=deal.eatery.name%></td><tr>
+  </table>
+  </div>
+    <%end%>
+    <% end %>
+</div>

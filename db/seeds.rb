@@ -8,8 +8,8 @@ Deal.delete_all()
 Eatery.delete_all()
 Burger.delete_all()
 
-burger1 = Burger.new({'name' => 'Mini Melt Burger', 'type' => 'cheeseburger', 'price' => 2.50, 'logo' => 'http://i66.tinypic.com/104papy.jpg'})
-burger2 = Burger.new({'name' => 'The Big Cheese', 'type' => 'cheeseburger', 'price' => 7.50, 'logo' => 'http://i68.tinypic.com/2hga0x2.jpg'})
+burger1 = Burger.new({'name' => 'Mini Melt Burger', 'type' => :cheeseburger, 'price' => 2.50, 'logo' => 'http://i66.tinypic.com/104papy.jpg'})
+burger2 = Burger.new({'name' => 'The Big Cheese', 'type' => :cheeseburger, 'price' => 7.50, 'logo' => 'http://i68.tinypic.com/2hga0x2.jpg'})
 burger1.save
 burger2.save
 
@@ -19,11 +19,15 @@ eatery2 = Eatery.new({'name' => 'Big Boy Burgers', 'contact' => '120 Wolfdale Ro
 eatery1.save
 eatery2.save
 
-deal1 = Deal.new({'name' => 'Threesdays 3-4-1', 'discount' => 0.33, 'day' => 'thursday', 'eatery_id' => eatery1.id, 'burger_id' => burger1.id})
-deal2 = Deal.new({'name' => 'Half-Price Half-Pounder', 'discount' => 0.50, 'day' => 'tuesday', 'eatery_id' => eatery2.id, 'burger_id' => burger2.id})
+deal1 = Deal.new({'name' => 'Threesdays 3-4-1', 'discount' => 0.33, 'day' => 'Thu', 'eatery_id' => eatery1.id, 'burger_id' => burger1.id})
+deal2 = Deal.new({'name' => 'Half-Price Half-Pounder', 'discount' => 0.50, 'day' => 'Tue', 'eatery_id' => eatery2.id, 'burger_id' => burger2.id})
+deal3 = Deal.new({'name' => 'Haooof-Price Half-Pounder', 'discount' => 0.50, 'day' => 'Mon', 'eatery_id' => eatery2.id, 'burger_id' => burger2.id})
 
 deal1.save
 deal2.save
+deal3.save
+
+
 
 
 binding.pry

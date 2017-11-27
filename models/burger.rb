@@ -7,7 +7,7 @@ class Burger
   def initialize( options )
     @id = options['id'].to_i if options['id']
     @name = options['name']
-    @type = options['type']
+    @type = options['type'].to_sym
     @price = options['price'].to_f
     @logo = options['logo']
   end
