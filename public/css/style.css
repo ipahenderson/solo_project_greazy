@@ -9,9 +9,38 @@ body{
   margin-bottom: 40px
 
 }
- ul li{
-   list-style-type: none;
- }
+ul li{
+  list-style-type: none;
+}
+
+.new-edit-form{
+  width: 100%
+  padding: 12px 20px;
+  background: rgba(255,255,255,0.6);
+  margin: 40px 0;
+  display: inline-block;
+  border: 3px solid white;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.new-edit-form p{
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+.label{
+  float:left;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.select{
+  float:right;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 5px;
+}
 
 .titles{
   text-align: center;
@@ -52,20 +81,20 @@ nav a{
 }
 
 .admin-button {
-    background-color: red;
-    border: none;
-    color: white;
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-width: 3px;
-    border-radius: 7px;
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-width: 3px;
+  border-radius: 7px;
 }
 .admin-button a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 .admin-button:hover{
   background-color: orange;
@@ -113,16 +142,16 @@ nav a{
 }
 
 .viewdeal-button {
-    background-color: green;
-    border: none;
-    color: white;
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-width: 3px;
-    border-radius: 7px;
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-width: 3px;
+  border-radius: 7px;
 }
 
 .viewdeal-button:hover{
@@ -177,61 +206,62 @@ table.deal-table tfoot td {
 }
 
 
+
 .new-deal-button {
-    background-color: green;
-    border: none;
-    color: white;
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-width: 3px;
-    border-radius: 7px;
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-width: 3px;
+  border-radius: 7px;
 }
 .new-deal-button a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 .new-deal-button:hover{
   background-color: orange;
 }
 
 .edit-button {
-    background-color: blue;
-    border: none;
-    color: white;
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-width: 3px;
-    border-radius: 7px;
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-width: 3px;
+  border-radius: 7px;
 }
 .edit-button a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 .edit-button:hover{
   background-color: orange;
 }
 
 .delete-button {
-    background-color: red;
-    border: none;
-    color: white;
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-width: 3px;
-    border-radius: 7px;
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-width: 3px;
+  border-radius: 7px;
 }
 .delete-button a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 .delete-button:hover{
   background-color: orange;
