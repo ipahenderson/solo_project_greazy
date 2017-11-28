@@ -32,7 +32,7 @@ get '/deals/:id' do
 end
 
 delete '/deals/:id' do
-deal = Deal.find(params[:id])
-deal.delete
-redirect to("/admin")
+  deal = Deal.find(params[:id])
+  deal.delete
+  redirect to("/admin")
 end
