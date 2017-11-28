@@ -82,15 +82,15 @@ class Deal
   values = [@eatery_id]
   result = SqlRunner.run(sql,values)[0]
   return Eatery.new(result)
-end
+  end
 
-def burger
-  sql = "SELECT *
+  def burger
+    sql = "SELECT *
         FROM burgers
         WHERE id = $1"
-  values = [@burger_id]
-  result = SqlRunner.run(sql,values)[0]
-  return Burger.new(result)
-end
+    values = [@burger_id]
+    result = SqlRunner.run(sql,values)[0]
+    return Burger.new(result)
+  end
 
 end

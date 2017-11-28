@@ -59,7 +59,7 @@ class Eatery
 
   def self.all
     sql = "SELECT * FROM eateries"
-    eateries = SqlRunner.run(sql, values)
+    eateries = SqlRunner.run(sql)
     return eateries.map {|eatery| Eatery.new(eatery)}
   end
 

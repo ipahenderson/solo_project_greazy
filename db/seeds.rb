@@ -19,9 +19,9 @@ eatery2 = Eatery.new({'name' => 'Big Boy Burgers', 'contact' => '120 Wolfdale Ro
 eatery1.save
 eatery2.save
 
-deal1 = Deal.new({'name' => 'Threesdays 3-4-1', 'discount' => 0.33, 'day' => 'Thu', 'eatery_id' => eatery1.id, 'burger_id' => burger1.id})
-deal2 = Deal.new({'name' => 'Half-Price Half-Pounder', 'discount' => 0.50, 'day' => 'Tue', 'eatery_id' => eatery2.id, 'burger_id' => burger2.id})
-deal3 = Deal.new({'name' => 'Haooof-Price Half-Pounder', 'discount' => 0.50, 'day' => 'Mon', 'eatery_id' => eatery2.id, 'burger_id' => burger2.id})
+deal1 = Deal.new({'name' => '4-4-1 Sliderz', 'discount' => 0.33, 'day' => 'Thursday', 'eatery_id' => eatery1.id, 'burger_id' => burger1.id})
+deal2 = Deal.new({'name' => 'Half-Price Half-Pounder', 'discount' => 0.50, 'day' => 'Tuesday', 'eatery_id' => eatery2.id, 'burger_id' => burger2.id})
+deal3 = Deal.new({'name' => 'Haooof-Price Half-Pounder', 'discount' => 0.50, 'day' => 'Monday', 'eatery_id' => eatery2.id, 'burger_id' => burger2.id})
 
 deal1.save
 deal2.save

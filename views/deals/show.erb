@@ -1,0 +1,29 @@
+<div>
+<table class="deal-table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Deal</th>
+      <th>Burger</th>
+      <th>Eatery</th>
+      <th>Day</th>
+      <th>Price</th>
+      <th>Discount</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td colspan="7">
+        <div class="new-deal-button"><a href="/">Home</a></div>
+      </td>
+    </tr>
+  </tfoot>
+
+  <tbody>
+    <tr>
+      <td><img src="<%=@deal.burger.logo%>" height="50px" width="50px"/></td><td><%= @deal.name %></td><td><%= @deal.burger.name %></td><td><%= @deal.eatery.name %></td><td><%= @deal.day %></td><td>£<%= @deal.burger.price %></td><td>£<%= @deal.burger.price * @deal.discount %></td></tr>
+    </tbody>
+  </tr>
+
+</table>
+</div>

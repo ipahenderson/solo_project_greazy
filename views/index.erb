@@ -1,4 +1,7 @@
 <div id="deals-table">
+  <div class="titles">
+    <h3>Today's Deals</h3>
+  </div>
 <% @deals.each do |deal|
   if deal.day == @today%>
   <div class="deal">
@@ -6,12 +9,12 @@
     <div class="deal-image"
     <span><img src="<%=deal.burger.logo%>" height=100px width=100px/></span>
   </div>
-    <a class="viewdeal-button" href="">View Deal</a>
+    <a class="viewdeal-button" href="/deals/<%=deal.id%>">View Deal</a>
     <table class="deal-info">
-      <tr><td><b>Regular Price:  </b> <%=deal.burger.price%></td><tr>
-      <tr><td><b>Discounted Price:   </b> 1234</td><tr>
-      <tr><td><b>Saving:   </b> 123</td><tr>
-      <tr><td><b>Eatery:   </b> <%=deal.eatery.name%></td><tr>
+      <tr><td><b>Eatery</b> <%=deal.eatery.name%></td><tr>
+      <tr><td><b>Regular Price</b> £<%=deal.burger.price%></td><tr>
+      <tr><td><b>Discounted Price</b> £<%= deal.burger.price * deal.discount %></td><tr>
+
   </table>
   </div>
     <%end%>

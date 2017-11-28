@@ -1,0 +1,58 @@
+<div class="container"><form action="/deals" method="post">
+
+  <label>
+  Select a Burger:
+    <select name="day">
+      <option value="Monday">Monday</option>
+      <option value="Tuesday">Tuesday</option>
+      <option value="Wednesday">Wednesday</option>
+      <option value="Thursday">Thursday</option>
+      <option value="Friday">Friday</option>
+      <option value="Saturday">Saturday</option>
+      <option value="Sunday">Sunday</option>
+    </select>
+  </label>
+
+  <div class="field-group">
+  <label for="discount-field" class="label">Discount</label>
+  <div class="field">
+    <input
+      type="text"
+      name="discount"
+      id="discount-field"
+      placeholder="Discount (i.e 0.5)"
+      required/>
+  </div>
+
+  <label>
+  Select a Burger:
+    <select name="burger_id">
+      <% for burger in @burgers %>
+      <option value="<%= burger.id %>"><%= burger.name %></option>
+      <% end %>
+    </select>
+  </label>
+
+  <label>
+    Select an Eatery:
+    <select name="eatery_id">
+      <% for eatery in @eateries %>
+      <option value="<%= eatery.id %>"><%= eatery.name %></option>
+      <% end %>
+    </select>
+  </label>
+
+  <div class="field-group">
+  <label for="deal-name-field" class="label">Deal Name</label>
+  <div class="field">
+    <input
+      type="text"
+      name="name"
+      id="deal-name-field"
+      placeholder="Deal name"
+      required/>
+  </div>
+
+  <input class="new-deal-button" type='submit' value="Create Deal">
+</form>
+</div>
