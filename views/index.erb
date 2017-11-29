@@ -1,6 +1,7 @@
 <div id="deals-table">
   <div class="titles">
     <h3>Today's Deals</h3>
+    <div class="new-deal-button weekly-button"><a href="/weekly">Week's Deals </a></div>
   </div>
 <% @deals.each do |deal|
   if deal.day == @today%>
@@ -11,10 +12,9 @@
   </div>
     <a class="viewdeal-button" href="/deals/<%=deal.id%>">View Deal</a>
     <table class="deal-info">
-      <tr><td><b>Eatery</b> <%=deal.eatery.name%></td><tr>
-      <tr><td><b>Regular Price</b> £<%=deal.burger.price%></td><tr>
-      <tr><td><b>Discounted Price</b> £<%= deal.burger.price * deal.discount %></td><tr>
-      <tr><td><div class="new-deal-button weekly-button"><a href="/weekly">Week's Deals </a></div></td></tr>
+      <tr><td><b>Eatery</b> <a class="float-right"><%=deal.eatery.name%></a></td><tr>
+      <tr><td><b>Regular Price</b> <a class="float-right">£<%=deal.burger.price%></a></td><tr>
+      <tr><td><b>Discounted Price</b> <a class="float-right">£<%= deal.burger.price * deal.discount %></a></td><tr>
   </table>
   </div>
     <%end%>

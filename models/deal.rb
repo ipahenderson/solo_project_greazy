@@ -110,4 +110,10 @@ class Deal
     return deals.map {|deal| Deal.new(deal)}
   end
 
+  def apply_discount
+    result = burger.price * @discount
+    return result
+  end
+
+
 end
