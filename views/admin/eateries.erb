@@ -1,0 +1,39 @@
+<div>
+<table class="deal-table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Eatery</th>
+      <th>Contact</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td colspan="4">
+        <div class="new-deal-button"><a href="/eateries/new">New Eatery</a></div>
+      </td>
+    </tr>
+  </tfoot>
+
+  <tbody>
+    <% @eateries.each do |eatery| %>
+    <tr>
+      <td><a href="/eateries/<%=eatery.id%>"><img src="<%=eatery.logo%>" height="50px" width="50px"/><a></td>
+      <td><%=eatery.name %></td>
+      <td><%= eatery.contact %></td>
+      <td><div class="edit-button"><a href="/eateries/<%=eatery.id%>/edit">Edit</a></div>
+          <form action="/eateries/<%=eatery.id%>" method="post">
+            <input type="hidden" name="_method" value="delete"/>
+            <button class="delete-button">Delete</button>
+          </form>
+
+      </td>
+
+    </tr>
+      <% end %>
+    </tbody>
+  </tr>
+
+</table>
+</div>

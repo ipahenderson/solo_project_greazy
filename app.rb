@@ -6,7 +6,7 @@ require_relative('./models/burger')
 require_relative('./models/deal')
 require_relative('./models/eatery')
 require_relative('controllers/deals_controller')
-# require_relative('controllers/burgers_controller')
+require_relative('controllers/burgers_controller')
 # require_relative('controllers/eateries_controller')
 
 get '/' do
@@ -16,8 +16,26 @@ get '/' do
 end
 
 get '/admin' do
+  erb(:admin)
+end
+
+get '/admin/deals' do
   @deals = Deal.all
   @burgers = Burger.all
   @eateries = Eatery.all
-  erb(:admin)
+  erb(:'admin/deals')
+end
+
+get '/admin/burgers' do
+  @deals = Deal.all
+  @burgers = Burger.all
+  @eateries = Eatery.all
+  erb(:'admin/burgers')
+end
+
+get '/admin/eateries' do
+  @deals = Deal.all
+  @burgers = Burger.all
+  @eateries = Eatery.all
+  erb(:'admin/eateries')
 end

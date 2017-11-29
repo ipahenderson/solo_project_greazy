@@ -1,0 +1,53 @@
+<form class="new-edit-form" action="/burgers" method="post">
+
+  <p>
+      <label for="burger-name-field" class="label">Burger Name:</label>
+        <input
+        class="select"
+        type="text"
+        name="name"
+        id="burger-name-field"
+        placeholder="Burger name"
+        required/>
+  </p>
+
+  <p><label class="label">
+  Burger Type:
+    </label>
+      <select class="select" name="type">
+        <option value="cheeseburger">Cheeseburger</option>
+        <option value="hamburger">Hamburger</option>
+        <option value="veggieburger">Veggie Burger</option>
+        <option value="chickenburger">Chicken Burger</option>
+        <option value="porkburger">Pork Burger</option>
+      </select>
+  </p>
+
+  <p>
+      <label for="price-field" class="label">Price:</label>
+        <input
+        class="select"
+        type="text"
+        name="price"
+        id="price-field"
+        placeholder="Price(i.e 7.60)"
+        required/>
+    </p>
+
+
+    <p>
+        <label for="logo-field" class="label">Image URL:</label>
+          <input
+          class="select"
+          type="text"
+          name="logo"
+          id="logo-field"
+          placeholder="Insert an image URL"
+          required/>
+      </p>
+
+
+  <p>
+    <input class="new-deal-button" type='submit' value="Create Burger">
+  </p>
+</form>

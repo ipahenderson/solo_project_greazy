@@ -6,8 +6,7 @@ body{
   margin-left: 0px;
   list-style-type: none;
   font-family: Arial;
-  margin-bottom: 40px
-
+  margin-bottom: 40px;
 }
 ul li{
   list-style-type: none;
@@ -33,6 +32,8 @@ ul li{
   float:left;
   padding-left: 5px;
   padding-right: 5px;
+  margin-top: 5px;
+  padding-bottom: 2px;
 }
 
 .select{
@@ -40,6 +41,10 @@ ul li{
   padding-left: 5px;
   padding-right: 5px;
   margin-right: 5px;
+  border-radius: 3px;
+  border-color: black;
+  height: 20px;
+  margin-bottom: 5px;
 }
 
 .titles{
@@ -60,8 +65,13 @@ ul li{
   top:0;
   text-align: center;
   border-bottom: thick solid black;
-
 }
+
+.header-logo{
+    margin: 50px;
+}
+
+
 .footer{
   width: 100%;
   position: fixed;
@@ -80,83 +90,6 @@ nav a{
   display: inline-block;
 }
 
-.admin-button {
-  background-color: red;
-  border: none;
-  color: white;
-  padding: 5px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-width: 3px;
-  border-radius: 7px;
-}
-.admin-button a {
-  text-decoration: none;
-  color: white;
-}
-.admin-button:hover{
-  background-color: orange;
-}
-/* LANDING PAGE DEALS OF THE DAY */
-
-.container{
-  display: flex;
-  justify-content: center;
-  overflow: scroll;
-}
-.deal-info{
-  text-align: left;
-  width: 100%;
-}
-
-.deal_table {
-  display: inline-block;
-}
-
-.deal {
-  float: left;
-  width: 300px;
-  margin: 10px 0;
-  padding: 20px;
-  padding-bottom: 40px;
-  text-align: center;
-  background: rgba(255,255,255,0.6);
-  background-clip: padding-box;
-  border: solid white;
-  border-width: 3px 0 3px 3px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  height: 320px;
-}
-.deal:first-child {
-  border-top-left-radius: 7px;
-  border-bottom-left-radius: 7px;
-}
-.deal:last-child {
-  border-width: 3px;
-  border-top-right-radius: 7px;
-  border-bottom-right-radius: 7px;
-}
-
-.viewdeal-button {
-  background-color: green;
-  border: none;
-  color: white;
-  padding: 5px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-width: 3px;
-  border-radius: 7px;
-}
-
-.viewdeal-button:hover{
-  background-color: orange;
-}
 
 /* ALL DEALS TABLE */
 
@@ -167,6 +100,7 @@ nav a{
   text-align: center;
   border-collapse: collapse;
   margin-top: 100px;
+
 }
 table.deal-table td, table.deal-table th {
   border: 1px solid white;
@@ -265,4 +199,85 @@ table.deal-table tfoot td {
 }
 .delete-button:hover{
   background-color: orange;
+}
+
+/* ADMIN */
+
+.admin-button {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-width: 3px;
+  border-radius: 7px;
+}
+.admin-button a {
+  text-decoration: none;
+  color: white;
+}
+.admin-button:hover{
+  background-color: orange;
+}
+/* LANDING PAGE DEALS OF THE DAY */
+
+.container{
+  display: flex;
+  justify-content: center;
+  overflow: scroll;
+}
+.deal-info{
+  text-align: left;
+  width: 100%;
+}
+
+.deal_table {
+  display: inline-block;
+}
+
+.deal {
+  float: left;
+  width: 300px;
+  margin: 10px 0;
+  padding: 20px;
+  padding-bottom: 40px;
+  text-align: center;
+  background: rgba(255,255,255,0.6);
+  background-clip: padding-box;
+  border: solid white;
+  border-width: 3px 3px 3px 3px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 320px;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  margin-right: 2px;
+}
+
+.viewdeal-button {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-width: 3px;
+  border-radius: 7px;
+}
+
+.viewdeal-button:hover{
+  background-color: orange;
+}
+
+/* ADMIN CONTROL PAGE */
+.admin-control{
+  text-align: center;
 }
