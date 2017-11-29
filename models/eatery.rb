@@ -34,8 +34,7 @@ class Eatery
     (
       name,
       contact,
-      logo,
-      quantity
+      logo
     ) =
     (
       $1, $2, $3

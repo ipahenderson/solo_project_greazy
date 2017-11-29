@@ -27,14 +27,17 @@ end
 
 
 get '/burgers/:id/edit' do
-  @deal = Deal.find(params[:id])
+  @burger = Burger.find(params[:id])
   @deals = Deal.all
   @burgers = Burger.all
   @eateries = Eatery.all
+  @types = [:cheeseburger, :hamburger, :veggieburger, :chickenburger, :porkburger]
   erb (:"/burgers/edit")
 end
 
 put '/burgers/:id' do
+  params['type'] = params['type'].to_sym
+
   Burger.new(params).update
   redirect to '/burgers'
 end

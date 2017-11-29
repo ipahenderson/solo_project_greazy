@@ -8,19 +8,18 @@
         name="name"
         id="burger-name-field"
         placeholder="Burger name"
+        value="<%= @burger.name %>"
         required/>
   </p>
 
   <p><label class="label">
   Burger Type:
     </label>
-      <select class="select" name="type">
-        <option value="cheeseburger">Cheeseburger</option>
-        <option value="hamburger">Hamburger</option>
-        <option value="veggieburger">Veggie Burger</option>
-        <option value="chickenburger">Chicken Burger</option>
-        <option value="porkburger">Pork Burger</option>
-      </select>
+  <select class="style" name="type">
+    <% for type in @types%>
+    <option value="<%=type%>" <%= "selected" if type == @burger.type%>><%= type.to_s.capitalize %></option>
+    <% end %>
+  </select>
   </p>
 
   <p>
@@ -31,6 +30,7 @@
         name="price"
         id="price-field"
         placeholder="Price(i.e 7.60)"
+        value="<%= @burger.price %>"
         required/>
     </p>
 
@@ -43,11 +43,12 @@
           name="logo"
           id="logo-field"
           placeholder="Insert an image URL"
+          value="<%= @burger.logo %>"
           required/>
       </p>
 
 
   <p>
-    <input class="new-deal-button" type='submit' value="Create Burger">
+    <input class="new-deal-button" type='submit' value="Update Burger">
   </p>
 </form>

@@ -7,7 +7,7 @@ require_relative('./models/deal')
 require_relative('./models/eatery')
 require_relative('controllers/deals_controller')
 require_relative('controllers/burgers_controller')
-# require_relative('controllers/eateries_controller')
+require_relative('controllers/eateries_controller')
 
 get '/' do
   @deals = Deal.all
