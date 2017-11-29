@@ -1,0 +1,36 @@
+<div id="deals-table">
+  <div class="titles">
+    <h3>Week's Deals</h3>
+  </div>
+
+<div>
+<table class="deal-table">
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th></th>
+      <th>Deal</th>
+      <th>Burger</th>
+      <th>Eatery</th>
+      <th>Price</th>
+      <th>Discount</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td colspan="7">
+        <div class="new-deal-button"><a href="/">Home</a></div>
+      </td>
+    </tr>
+  </tfoot>
+
+  <tbody>
+    <% @deals.each do |deal| %>
+    <tr>
+      <td><%= deal.day %></td><td><img src="<%=deal.burger.logo%>" height="50px" width="50px"/></td><td><%= deal.name %></td><td><%= deal.burger.name %></td><td><%= deal.eatery.name %></td><td>£<%= deal.burger.price %></td><td>£<%= deal.burger.price * deal.discount %></td></tr>
+      <% end %>
+    </tbody>
+  </tr>
+
+</table>
+</div>

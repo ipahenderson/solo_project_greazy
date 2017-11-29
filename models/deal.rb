@@ -93,4 +93,21 @@ class Deal
     return Burger.new(result)
   end
 
+  def self.order_by_day
+    sql= "SELECT *
+          FROM deals
+          ORDER BY
+          CASE
+          WHEN Day = 'Sunday' THEN 1
+          WHEN Day = 'Monday' THEN 2
+          WHEN Day = 'Tuesday' THEN 3
+          WHEN Day = 'Wednesday' THEN 4
+          WHEN Day = 'Thursday' THEN 5
+          WHEN Day = 'Friday' THEN 6
+          WHEN Day = 'Saturday' THEN 7
+          END ASC"
+    deals = SqlRunner.run(sql)
+    return deals.map {|deal| Deal.new(deal)}
+  end
+
 end

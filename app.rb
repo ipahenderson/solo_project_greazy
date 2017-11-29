@@ -14,6 +14,10 @@ get '/' do
   @today = Date.today.strftime("%A")
   erb(:index)
 end
+get '/weekly' do
+  @deals = Deal.order_by_day
+  erb(:weekly)
+end
 
 get '/admin' do
   erb(:admin)

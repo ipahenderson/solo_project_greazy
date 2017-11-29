@@ -99,7 +99,6 @@ nav a{
   width: 100%;
   text-align: center;
   border-collapse: collapse;
-  margin-top: 100px;
 
 }
 table.deal-table td, table.deal-table th {
@@ -139,6 +138,9 @@ table.deal-table tfoot td {
   font-size: 13px;
 }
 
+.weekly-button{
+  margin-left: 65px !important;
+}
 
 
 .new-deal-button {
