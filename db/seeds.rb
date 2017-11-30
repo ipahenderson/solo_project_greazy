@@ -31,7 +31,7 @@ eatery1 = Eatery.new({'name' => 'Sliderz', 'contact' => '34 Baggins Street', 'lo
 eatery2 = Eatery.new({'name' => 'Big Boy Burgers', 'contact' => '120 Wolfdale Road', 'logo' => 'http://i63.tinypic.com/6ok7cm.jpg'})
 eatery3 = Eatery.new({'name' => 'Philling Station', 'contact' => '65 Ledge St.', 'logo' => 'https://images-na.ssl-images-amazon.com/images/I/51YGq8kKLwL._SY450_.jpg'})
 eatery4 = Eatery.new({'name' => 'Petit Jardine', 'contact' => '165 Posh Blvd.', 'logo' => 'https://i.pinimg.com/736x/bf/fa/62/bffa62b2416a7154de806c4e67896ba1--cute-cookies-iced-cookies.jpg'})
-eatery5 = Eatery.new({'name' => 'The Whole Hog', 'contact' => '12 Farm Ave.', 'logo' => 'https://i.pinimg.com/736x/bf/fa/62/bffa62b2416a7154de806c4e67896ba1--cute-cookies-iced-cookies.jpg'})
+eatery5 = Eatery.new({'name' => 'The Whole Hog', 'contact' => '12 Farm Ave.', 'logo' => 'http://2.bp.blogspot.com/_51b2Mx7RKxY/TSpQgqqfWXI/AAAAAAAAAGc/CPHLfoPulkQ/s1600/Whole+Hog+Cafe+Logo+JPEG.jpg'})
 
 eatery1.save
 eatery2.save
