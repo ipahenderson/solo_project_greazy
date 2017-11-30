@@ -22,7 +22,7 @@
   <tbody>
     <% @deals.each do |deal| %>
     <tr>
-      <td><img src="<%=deal.burger.logo%>" height="50px" width="50px"/></td><td><%= deal.name %></td><td><%= deal.burger.name %></td><td><%= deal.eatery.name %></td><td><%= deal.day %></td><td>£<%= deal.burger.price %></td><td>£<%= deal.burger.price * deal.discount %></td></tr>
+      <td><img src="<%=deal.burger.logo%>" height="50px" width="50px"/></td><td><%= deal.name %></td><td><%= deal.burger.name %></td><td><%= deal.eatery.name %></td><td><%= deal.day %></td><td>£<%= deal.burger.pretty_price %></td><td>£<%= deal.apply_discount %></td></tr>
       <% end %>
     </tbody>
   </tr>

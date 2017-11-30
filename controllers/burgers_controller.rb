@@ -20,6 +20,7 @@ get '/burgers/new' do
   erb(:'burgers/new')
 end
 post '/burgers' do
+  params['price'] = (params['price'].to_f * 100)
   burger = Burger.new(params)
   burger.save
   redirect to("/burgers")
@@ -37,7 +38,7 @@ end
 
 put '/burgers/:id' do
   params['type'] = params['type'].to_sym
-
+  params['price'] = (params['price'].to_f * 100)
   Burger.new(params).update
   redirect to '/burgers'
 end

@@ -274,6 +274,10 @@ table.deal-table tfoot td {
 .float-right{
   float: right !important;
 }
+
+.red-text{
+  color: red !important;
+}
 .viewdeal-button {
   background-color: green;
   border: none;

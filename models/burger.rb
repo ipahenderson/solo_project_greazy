@@ -8,7 +8,7 @@ class Burger
     @id = options['id'].to_i if options['id']
     @name = options['name']
     @type = options['type'].to_sym
-    @price = options['price'].to_f
+    @price = options['price'].to_i
     @logo = options['logo']
   end
 
@@ -92,4 +92,8 @@ class Burger
   return  Deal.map_items(deals)
   end
 
+  def pretty_price
+    calc = price / 100.00
+    return sprintf("%.2f", calc)
+  end
 end

@@ -21,7 +21,7 @@
     <tr>
       <td><a href="/burgers/<%=burger.id%>"><img src="<%=burger.logo%>" height="50px" width="50px"/><a></td>
       <td><%=burger.name %></td>
-      <td>£<%= burger.price %></td>
+      <td>£<%= burger.pretty_price %></td>
       <td><div class="edit-button"><a href="/burgers/<%=burger.id%>/edit">Edit</a></div>
           <form action="/burgers/<%=burger.id%>" method="post">
             <input type="hidden" name="_method" value="delete"/>

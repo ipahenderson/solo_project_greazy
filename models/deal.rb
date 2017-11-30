@@ -111,8 +111,8 @@ class Deal
   end
 
   def apply_discount
-    result = burger.price * @discount
-    return result
+    result = (burger.price) * @discount
+    return sprintf("%.2f", result/100)
   end
 
 

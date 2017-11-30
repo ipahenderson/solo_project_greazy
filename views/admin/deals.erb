@@ -28,8 +28,8 @@
       <td><%= deal.burger.name %></td>
       <td><%= deal.eatery.name %></td>
       <td><%= deal.day %></td>
-      <td>£<%= deal.burger.price %></td>
-      <td>£<%= deal.burger.price * deal.discount %></td>
+      <td>£<%= deal.burger.pretty_price %></td>
+      <td>£<%= deal.apply_discount %></td>
       <td><div class="edit-button"><a href="/deals/<%=deal.id%>/edit">Edit</a></div>
           <form action="/deals/<%=deal.id%>" method="post">
             <input type="hidden" name="_method" value="delete"/>

@@ -12,9 +12,10 @@
   </div>
     <a class="viewdeal-button" href="/deals/<%=deal.id%>">View Deal</a>
     <table class="deal-info">
+      <tr><td><b>Burger</b> <a class="float-right"><%=deal.burger.name%></a></td><tr>
       <tr><td><b>Eatery</b> <a class="float-right"><%=deal.eatery.name%></a></td><tr>
-      <tr><td><b>Regular Price</b> <a class="float-right">£<%=deal.burger.price%></a></td><tr>
-      <tr><td><b>Discounted Price</b> <a class="float-right">£<%= deal.burger.price * deal.discount %></a></td><tr>
+      <tr><td><b>Regular Price</b> <a class="float-right"><del>£<%=deal.burger.pretty_price%></del></a></td><tr>
+      <tr><td><b>Discounted Price</b> <a class="float-right red-text">£<%= deal.apply_discount %></a></td><tr>
   </table>
   </div>
     <%end%>
