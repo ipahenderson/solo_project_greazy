@@ -1,63 +1,75 @@
 <form class="new-edit-form" action="/deals" method="post">
 
-  <p><label class="label">
+  <div class="field-group">
+    <label class="label">
     Select a Day:
     </label>
-      <select class="select" name="day">
-        <option value="Monday">Monday</option>
-        <option value="Tuesday">Tuesday</option>
-        <option value="Wednesday">Wednesday</option>
-        <option value="Thursday">Thursday</option>
-        <option value="Friday">Friday</option>
-        <option value="Saturday">Saturday</option>
-        <option value="Sunday">Sunday</option>
-      </select>
-</p>
+  <div class="field">
+  <select class="select" name="day">
+    <option value="Monday">Monday</option>
+    <option value="Tuesday">Tuesday</option>
+    <option value="Wednesday">Wednesday</option>
+    <option value="Thursday">Thursday</option>
+    <option value="Friday">Friday</option>
+    <option value="Saturday">Saturday</option>
+    <option value="Sunday">Sunday</option>
+  </select>
+  </div>
+</div>
+
+<div class="field-group">
+  <label for="discount-field" class="label">Discount:</label>
+  <div class="field">
+  <input
+  class="select"
+  type="text"
+  name="discount"
+  id="discount-field"
+  placeholder="Discount (i.e 0.5)"
+  required/>
+  </div>
+</div>
+
+<div class="field-group">
+  <label class="label">
+    Select a Burger:
+  </label>
+  <div class="field">
+  <select class="select" name="burger_id">
+    <% for burger in @burgers %>
+    <option value="<%= burger.id %>"><%= burger.name %></option>
+    <% end %>
+  </select>
+</div>
+</div>
+
+<div class="field-group">
+  <label class="label">
+    Select an Eatery:
+  </label>
+  <div class="field">
+  <select class="select" name="eatery_id">
+    <% for eatery in @eateries %>
+    <option value="<%= eatery.id %>"><%= eatery.name %></option>
+    <% end %>
+  </select>
+</div>
+</div>
+
+<div class="field-group">
+  <label for="deal-name-field" class="label">Deal Name:</label>
+  <div class="field">
+  <input
+  class="select"
+  type="text"
+  name="name"
+  id="deal-name-field"
+  placeholder="Deal name"
+  required/>
+</div>
+</div>
 
 <p>
-    <label for="discount-field" class="label">Discount:</label>
-      <input
-      class="select"
-      type="text"
-      name="discount"
-      id="discount-field"
-      placeholder="Discount (i.e 0.5)"
-      required/>
-  </p>
-
-  <p>
-    <label class="label">
-      Select a Burger:
-      </label>
-        <select class="select" name="burger_id">
-          <% for burger in @burgers %>
-          <option value="<%= burger.id %>"><%= burger.name %></option>
-          <% end %>
-        </select>
-  </p>
-
-  <p>
-    <label class="label">
-      Select an Eatery:
-      </label>
-      <select class="select" name="eatery_id">
-        <% for eatery in @eateries %>
-        <option value="<%= eatery.id %>"><%= eatery.name %></option>
-        <% end %>
-      </select>
-  </p>
-
-  <p>
-      <label for="deal-name-field" class="label">Deal Name:</label>
-        <input
-        class="select"
-        type="text"
-        name="name"
-        id="deal-name-field"
-        placeholder="Deal name"
-        required/>
-  </p>
-  <p>
-    <input class="new-deal-button" type='submit' value="Create Deal">
-  </p>
-</form>
+  <input class="new-deal-button" type='submit' value="Create Deal">
+</div>
+</p>

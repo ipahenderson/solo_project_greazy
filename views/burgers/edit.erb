@@ -1,7 +1,8 @@
 <form class="new-edit-form" action="/burgers/<%= @burger.id %>" method="post">
-      <input type="hidden" name="_method" value="put"/>
-  <p>
+  <input type="hidden" name="_method" value="put"/>
+    <div class="field-group">
       <label for="burger-name-field" class="label">Burger Name:</label>
+      <div class="field">
         <input
         class="select"
         type="text"
@@ -10,20 +11,25 @@
         placeholder="Burger name"
         value="<%= @burger.name %>"
         required/>
-  </p>
+      </div>
+    </div>
 
-  <p><label class="label">
+  <div class="field-group">
+  <label class="label">
   Burger Type:
     </label>
-  <select class="style" name="type">
+    <div class="field">
+  <select class="select" name="type">
     <% for type in @types%>
     <option value="<%=type%>" <%= "selected" if type == @burger.type%>><%= type.to_s.capitalize %></option>
     <% end %>
   </select>
-  </p>
+    </div>
+  </div>
 
-  <p>
+    <div class="field-group">
       <label for="price-field" class="label">Price:</label>
+      <div class="field">
         <input
         class="select"
         type="text"
@@ -32,11 +38,13 @@
         placeholder="Price(i.e 7.60)"
         value="<%= @burger.pretty_price %>"
         required/>
-    </p>
+      </div>
+    </div>
 
 
-    <p>
+      <div class="field-group">
         <label for="logo-field" class="label">Image URL:</label>
+        <div class="field">
           <input
           class="select"
           type="text"
@@ -45,7 +53,8 @@
           placeholder="Insert an image URL"
           value="<%= @burger.logo %>"
           required/>
-      </p>
+        </div>
+      </div>
 
 
   <p>

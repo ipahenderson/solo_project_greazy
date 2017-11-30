@@ -17,7 +17,6 @@ h3{
   margin-bottom: 5px !important;
 }
 .new-edit-form{
-  width: 100%
   padding: 12px 20px;
   background: rgba(255,255,255,0.6);
   margin: 40px 0;
@@ -47,8 +46,9 @@ h3{
   margin-right: 5px;
   border-radius: 3px;
   border-color: black;
-  height: 20px;
+  height: 25px;
   margin-bottom: 5px;
+  font-size: 15px;
 }
 
 .titles{
@@ -124,8 +124,10 @@ table.deal-table thead th {
   font-size: 19px;
   font-weight: bold;
   color: black;
-  text-align: left;
+  text-align: center;
   border-left: 3px solid white;
+  padding: 0px 5px 0px 5px;
+
 }
 table.deal-table thead th:first-child {
   border-left: none;
@@ -140,6 +142,11 @@ table.deal-table tfoot {
 }
 table.deal-table tfoot td {
   font-size: 13px;
+}
+
+.day-bold{
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .weekly-button{
@@ -300,4 +307,12 @@ table.deal-table tfoot td {
 /* ADMIN CONTROL PAGE */
 .admin-control{
   text-align: center;
+}
+
+form .field-group{
+  display: flex;
+  margin: 0px 0px 12px 0px;
+}
+form .field-group .field{
+  flex: 3;
 }

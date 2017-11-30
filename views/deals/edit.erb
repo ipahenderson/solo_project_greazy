@@ -1,18 +1,20 @@
 <form class="new-edit-form" action="/deals/<%= @deal.id %>" method="post">
     <input type="hidden" name="_method" value="put"/>
-  <p><label class="label">
+  <div class="field-group"><label class="label">
     Select a Day:
     </label>
+    <div class="field">
       <select class="select" name="day">
         <% for day in @days%>
         <<option value="<%=day%>" <%= "selected" if day == @deal.day%>><%= day %></option>
         <% end %>
-
       </select>
-</p>
+    </div>
+</div>
 
-<p>
+<div class="field-group">
     <label for="discount-field" class="label">Discount:</label>
+    <div class="field">
       <input
       class="select"
       type="text"
@@ -21,32 +23,38 @@
       placeholder="Discount (i.e 0.5)"
       value="<%= @deal.discount %>"
       required/>
-  </p>
+    </div>
+  </div>
 
-  <p>
+  <div class="field-group">
     <label class="label">
       Select a Burger:
       </label>
+      <div class="field">
         <select class="select" name="burger_id">
           <% for burger in @burgers %>
           <option value="<%= burger.id %>" <%= "selected" if burger.id == @deal.burger_id%>><%= burger.name %></option>
           <% end %>
         </select>
-  </p>
+      </div>
+  </div>
 
-  <p>
+  <div class="field-group">
     <label class="label">
       Select an Eatery:
       </label>
+      <div class="field">
       <select class="select" name="eatery_id">
         <% for eatery in @eateries %>
         <option value="<%= eatery.id %>" <%= "selected" if eatery.id == @deal.eatery_id%>><%= eatery.name %></option>
         <% end %>
       </select>
-  </p>
+    </div>
+  </div>
 
-  <p>
+  <div class="field-group">
       <label for="deal-name-field" class="label">Deal Name:</label>
+      <div class="field">
         <input
         class="select"
         type="text"
@@ -55,7 +63,8 @@
         placeholder="Deal name"
         value="<%= @deal.name %>"
         required/>
-  </p>
+      </div>
+  </div>
   <p>
     <input class="new-deal-button" type='submit' value="Update Deal">
   </p>

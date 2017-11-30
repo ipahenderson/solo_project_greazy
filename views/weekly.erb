@@ -25,10 +25,17 @@
   </tfoot>
 
   <tbody>
-    <% @deals.each do |deal| %>
-    <tr>
-      <td><%= deal.day %></td><td><img src="<%=deal.burger.logo%>" height="50px" width="50px"/></td><td><%= deal.name %></td><td><%= deal.burger.name %></td><td><%= deal.eatery.name %></td><td>£<%= deal.burger.pretty_price %></td><td>£<%= deal.apply_discount %></td></tr>
+    <% current_day = @deals[0].day %>
+    <% @deals.each_with_index do |deal, index| %>
+      <% if current_day == deal.day && index != 0 %>
+        <% day_to_display = "" %>
+      <% else %>
+        <% day_to_display = deal.day %>
+        <% current_day = deal.day %>
       <% end %>
+    <tr>
+      <td><span class="day-bold"><%= day_to_display %></span></td><td><img src="<%=deal.burger.logo%>" height="50px" width="50px"/></td><td><%= deal.name %></td><td><%= deal.burger.name %></td><td><%= deal.eatery.name %></td><td>£<%= deal.burger.pretty_price %></td><td>£<%= deal.apply_discount %></td></tr>
+    <% end %>
     </tbody>
   </tr>
 
