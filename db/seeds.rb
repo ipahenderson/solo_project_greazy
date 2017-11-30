@@ -14,7 +14,7 @@ burger3 = Burger.new({'name' => 'The Tall Burger', 'type' => :hamburger, 'price'
 burger4 = Burger.new({'name' => 'Meat Is Murder', 'type' => :vegieburger, 'price' => 1290, 'logo' => 'https://www.thescottishsun.co.uk/wp-content/uploads/sites/2/2017/04/unless-e28093-hardcore-vegan-catering2.jpg?strip=all&w=800&quality=100'})
 burger5 = Burger.new({'name' => 'The Big Cluck', 'type' => :chickenburger, 'price' => 750, 'logo' => 'http://bk-apac-prd.s3.amazonaws.com/sites/burgerking.co.nz/files/BUR2060C.Webtiles.500x400.CrispyChickenBurger.png'})
 burger6 = Burger.new({'name' => 'Pork n Slaw', 'type' => :porkburger, 'price' => 820, 'logo' => 'http://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/7/2/0/DG0104H_pulled-pork-sandiwch_s4x3.jpg.rend.hgtvcom.616.462.suffix/1435869335054.jpeg'})
-burger7 = Burger.new({'name' => 'Mini Meat', 'type' => :hamburger, 'price' => 300, 'logo' => 'https://search.chow.com/thumbnail/800/600/www.chowstatic.com/assets/2009/07/beef_slider_burger_600.jpg'})
+burger7 = Burger.new({'name' => 'Mini Meat', 'type' => :hamburger, 'price' => 300, 'logo' => 'https://cf.thetaylor-house.com/wp-content/uploads/2017/06/Burger5.jpg'})
 burger8 = Burger.new({'name' => 'Veggie Supreme', 'type' => :vegieburger, 'price' => 1590, 'logo' => 'http://www.theporchcafe.com/wp-content/uploads/original-1.png'})
 
 

@@ -277,6 +277,7 @@ table.deal-table tfoot td {
 
 .red-text{
   color: red !important;
+  font-size: 20px;
 }
 .viewdeal-button {
   background-color: green;
