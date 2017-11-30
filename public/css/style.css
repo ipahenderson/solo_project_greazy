@@ -273,6 +273,7 @@ table.deal-table tfoot td {
 }
 .float-right{
   float: right !important;
+  font-size: 18px;
 }
 
 .red-text{
